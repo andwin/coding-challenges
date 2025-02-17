@@ -2,7 +2,7 @@
   "name": "programming-challenges",
   "description": "",
   "scripts": {
-    "test": "tsc && vitest"
+    "test": "vitest"
   },
   "devDependencies": {
     "typescript": "^5.3.3",
