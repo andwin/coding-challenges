@@ -2,9 +2,10 @@
   "name": "programming-challenges",
   "description": "",
   "scripts": {
-    "test": "vitest"
+    "test": "eslint &&vitest"
   },
   "devDependencies": {
+    "@andwin/eslint-config": "^0.0.16",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   }
