@@ -14,8 +14,6 @@ const freedPrisoners = (cells: number[]) => {
   return freed
 }
 
-const invertCells = (cells: number[]) => {
-  return cells.map(cell => cell === 1 ? 0 : 1)
-}
+const invertCells = (cells: number[]) => cells.map(cell => (cell === 1 ? 0 : 1))
 
 export default freedPrisoners

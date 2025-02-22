@@ -9,7 +9,7 @@ enum Direction {
   Up = 0,
   Down = 1,
   Left = 2,
-  Right = 3
+  Right = 3,
 }
 
 const spiralMatrix = (size: number, text: string): Matrix => {
@@ -17,8 +17,8 @@ const spiralMatrix = (size: number, text: string): Matrix => {
   const transformedText = transformText(size, text)
 
   let position: Position = {
-    x: Math.ceil(size / 2) -1,
-    y: Math.ceil(size / 2) -1
+    x: Math.ceil(size / 2) - 1,
+    y: Math.ceil(size / 2) - 1,
   }
   let direction: Direction = Direction.Right
 
@@ -57,11 +57,13 @@ const nextPosition = (position: Position, direction: Direction): Position => {
     case Direction.Up:
       return { x: position.x, y: position.y - 1 }
     case Direction.Down:
-      return { x: position.x, y: position.y +  1 }
+      return { x: position.x, y: position.y + 1 }
     case Direction.Left:
       return { x: position.x - 1, y: position.y }
-     case Direction.Right:
+    case Direction.Right:
       return { x: position.x + 1, y: position.y }
+    default:
+      throw new Error('Invalid direction')
   }
 }
 
@@ -76,7 +78,7 @@ const timeToChangeDirection = (matrix: Matrix, position: Position, direction: Di
   }
 
   const cell = cellToCheck(position, direction)
-  if (matrix[cell.y][cell.x] == '') {
+  if (matrix[cell.y][cell.x] === '') {
     return true
   }
 
@@ -93,6 +95,8 @@ const cellToCheck = (position: Position, direction: Direction): Position => {
       return { x: position.x, y: position.y - 1 }
     case Direction.Right:
       return { x: position.x, y: position.y + 1 }
+    default:
+      throw new Error('Invalid direction')
   }
 }
 
@@ -106,6 +110,8 @@ const nextDirection = (direction: Direction): Direction => {
       return Direction.Up
     case Direction.Right:
       return Direction.Down
+    default:
+      throw new Error('Invalid direction')
   }
 }
 

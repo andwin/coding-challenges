@@ -1,7 +1,6 @@
 import { test, assert } from 'vitest'
 import freedPrisoners from './index'
 
-
 test('freed prisoners', () => {
   assert.equal(freedPrisoners([1, 1, 0, 0, 0, 1, 0]), 4)
   assert.equal(freedPrisoners([1, 0, 0, 0, 0, 0, 0]), 2)
