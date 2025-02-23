@@ -8,6 +8,5 @@
     "@andwin/eslint-config": "^0.0.16",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
-  },
-  "packageManager": "pnpm@10"
+  }
 }
