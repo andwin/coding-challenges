@@ -24,15 +24,6 @@ jobs:
         version: 10
         run_install: true
 
-    - name: Add pnpm bin to PATH
-      run: echo "$(pnpm bin)" >> $GITHUB_PATH
-
-    - name: Debug ESLint bin location
-      run: ls -la node_modules/.bin
-
-    - name: Debug dependencies
-      run: pnpm list --depth=1
-
     - name: Run ESLint manually
       run: pnpm exec eslint .
 
