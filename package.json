@@ -1,5 +1,5 @@
 {
-  "name": "programming-challenges",
+  "name": "coding-challenges",
   "description": "",
   "scripts": {
     "test": "eslint . && vitest --run && tsc"
