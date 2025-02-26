@@ -1,6 +1,6 @@
 {
   "name": "coding-challenges",
-  "description": "",
+  "description": "A repository of various coding challenges I've solved",
   "scripts": {
     "test": "eslint . && vitest --run && tsc"
   },
