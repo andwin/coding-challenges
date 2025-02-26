@@ -2,7 +2,7 @@
   "name": "programming-challenges",
   "description": "",
   "scripts": {
-    "test": "eslint . && vitest --run"
+    "test": "eslint . && vitest --run && tsc"
   },
   "devDependencies": {
     "@andwin/eslint-config": "^0.0.16",
